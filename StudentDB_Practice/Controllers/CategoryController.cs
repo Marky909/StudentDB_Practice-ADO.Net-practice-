@@ -32,6 +32,13 @@ namespace StudentDB_Practice.Controllers
 
             return Content($"Category saved! ID = {category.Id}");
         }
+
+        public IActionResult Index()
+        {
+            var categories = _context.Categories.ToList();
+
+            return View(categories);
+        }
     }
 
         
